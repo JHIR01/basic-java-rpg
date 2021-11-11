@@ -9,18 +9,25 @@ package bjr1;
  * - the numeral effect of the item
  */
 
-public class Item {
+class Item {
 
     // field declarations
     String name;
     String description;
     int usage;
-    boolean deal;
-    int effect;
+    boolean deal; // determines whether the Item will deal damage
+    int effect; // This is a numeral value of what the Item will have when used on a player or the enemy
 
     /**
      * Constructor
      */
+    public Item(String newName, String newDes, int newUse, boolean newDeal, int newEffect){
+        setName(newName);
+        setDescription(newDes);
+        setUsage(newUse);
+        setDeal(newDeal);
+        setEffect(newEffect);
+    }
 
     // Methods
 
@@ -57,6 +64,62 @@ public class Item {
      */
     void setUsage(int newUse){
         usage = newUse;
+    }
+
+    /**
+     * Method to get the usage/durability of the Item
+     */
+    int getUsage(){
+        return usage;
+    }
+
+    /**
+     * Method to set the deal of the Item
+     */
+    void setDeal(boolean newDeal){
+        deal = newDeal;
+    }
+
+    /**
+     * Method to get the deal of the Item
+     */
+    boolean getDeal(){
+        return deal;
+    }
+
+    /**
+     * Method to set the effect of the Item
+     */
+    void setEffect(int newE){
+        effect = newE;
+    }
+
+    /**
+     * Method to get the effect of the Item
+     */
+    int getEffect(){
+        return effect;
+    }
+
+    /**
+     * Method to print information about the Item
+     */
+    void printItem(){
+        System.out.println(toString());
+    }
+
+    /**
+     * toString
+     */
+    @Override
+    public String toString(){
+        String returnThis =
+                "Name: " + name
+                + "\nDescription: " + description
+                + "\nUsage/Durability: " + usage
+                + "\nDeal: " + deal
+                + "\nEffect: " + effect;
+        return returnThis;
     }
 
 }
