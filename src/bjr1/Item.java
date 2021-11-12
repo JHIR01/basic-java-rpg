@@ -17,6 +17,7 @@ class Item {
     int usage;
     boolean deal; // determines whether the Item will deal damage
     int effect; // This is a numeral value of what the Item will have when used on a player or the enemy
+    int cUse; // this value indicates how many times the item can be used before it cannot be used anymore
 
     /**
      * Constructor
@@ -102,6 +103,20 @@ class Item {
     }
 
     /**
+     * Method to set how many times an item can be used
+     */
+    void setCUse(){
+        cUse = usage;
+    }
+
+    /**
+     * Method to get how many more times the item can be used
+     */
+    int getCUse(){
+        return cUse;
+    }
+
+    /**
      * Method to print information about the Item
      */
     void printItem(){
@@ -118,7 +133,8 @@ class Item {
                 + "\nDescription: " + description
                 + "\nUsage/Durability: " + usage
                 + "\nDeal: " + deal
-                + "\nEffect: " + effect;
+                + "\nEffect: " + effect
+                + "\ncUse: " + cUse;
         return returnThis;
     }
 

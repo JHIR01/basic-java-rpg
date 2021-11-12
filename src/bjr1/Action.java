@@ -18,4 +18,14 @@ class Action extends Item{
 
     // Methods
 
+    /**
+     * toString
+     */
+    @Override
+    public String toString(){
+        String returnThis =
+                super.toString();
+        return returnThis;
+    }
+
 }
