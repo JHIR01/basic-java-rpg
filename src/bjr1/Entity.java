@@ -9,7 +9,7 @@ import java.util.*;
  * - vitality
  */
 
-public class Entity {
+class Entity {
 
     // field declarations
     ArrayList<Action> actionList = new ArrayList<>();
