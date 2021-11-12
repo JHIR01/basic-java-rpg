@@ -15,6 +15,7 @@ class Entity {
     ArrayList<Action> actionList = new ArrayList<>();
     ArrayList<Item> itemList = new ArrayList<>();
     int lifePoints;
+    int lPC; // this values how much life the entity has
 
     /**
      * Constructor
@@ -76,6 +77,20 @@ class Entity {
      */
     int getLifePoints(){
         return lifePoints;
+    }
+
+    /**
+     * Method to set how many health points are left for the entity
+     */
+    void setlPC(){
+        lPC = lifePoints;
+    }
+
+    /**
+     * Method to get how many life points are left on for the entity
+     */
+    int getLPC(){
+        return lPC;
     }
 
     /**
