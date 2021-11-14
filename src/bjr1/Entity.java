@@ -20,8 +20,9 @@ class Entity {
     /**
      * Constructor
      */
-    public Entity(){
-
+    Entity(int newLP){
+        setLifePoints(newLP);
+        setlPC();
     }
 
     // Methods

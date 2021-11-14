@@ -20,4 +20,11 @@ public class Room {
 
     // Methods
 
+    /**
+     * Method to assign on of the rooms to have an exit/entrance
+     */
+    void setEntrance(){
+
+    }
+
 }
